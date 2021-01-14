@@ -12,6 +12,7 @@ import ButtonHabilities from "../button-habilities";
 import SectionTitle from "../section-title";
 import BaseLineKnob from "../baseline-knob";
 import Role from "../role";
+import PresentationBorder from "../presentation-border";
 
 export default function SkillsSection() {
   let [bulletPosition, setBulletPosition] = useState("10%");
@@ -157,6 +158,9 @@ export default function SkillsSection() {
                           poster={optionHabilities.poster}
                         />
                       </div>
+                    </div>
+                    <div className="container">
+                      <PresentationBorder/>
                     </div>
                   </div>
                 </div>

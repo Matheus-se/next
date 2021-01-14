@@ -568,6 +568,24 @@ export const HabilitiesSection = styled.div`
                     }
                   }
                 }
+
+                .container {
+                  position: absolute;
+                  inset: 1px;
+                  pointer-events: none;
+                  z-index: 1;
+
+                  svg {
+                    fill: none;
+                    stroke: white;
+                    height: calc(100% + 24px);
+                    left: 8px;
+                    top: -12px;
+                    width: calc(100% - 16px);
+                    position: absolute;
+                    display: block;
+                  }
+                }
               }
             }
           }
