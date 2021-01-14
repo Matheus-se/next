@@ -414,6 +414,7 @@ export const HabilitiesSection = styled.div`
                     margin: 0px auto 10px;
 
                     .option-icon-content {
+                      z-index: 10;
                       position: absolute;
                       top: 5px;
                       left: 5px;
@@ -437,7 +438,6 @@ export const HabilitiesSection = styled.div`
                       top: -1px;
                       width: 100%;
                       height: 100%;
-                      opacity: 0;
                       transition: opacity 200ms ease 0s;
                       position: absolute;
 
@@ -448,6 +448,16 @@ export const HabilitiesSection = styled.div`
                         position: absolute;
                         inset: 1px;
                         pointer-events: none;
+
+                        svg {
+                          fill: none;
+                          position: absolute;
+                          display: block;
+                          width: 74px;
+                          height: 74px;
+                          left: -2px;
+                          top: -2px;
+                        }
                       }
                     }
                   }
@@ -701,7 +711,7 @@ export const SkinSection = styled.section`
                           display: block;
                           left: 3px;
                           top: 3px;
-                          width: 100%;
+                          width: 99%;
                           height: 100%;
                         }
                       }
@@ -712,7 +722,7 @@ export const SkinSection = styled.section`
                         width: 100px;
                         height: 100px;
 
-                        .active {
+                        .isActiveSkin {
                           transform: scale(1) !important;
                         }
 

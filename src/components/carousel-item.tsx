@@ -10,7 +10,7 @@ export default function CarouselItem(props) {
         <div className="carrousel-thumb-wrapper">
           <div
             className={
-              props?.active ? "carrousel-thumb active" : "carrousel-thumb"
+              props?.active ? "carrousel-thumb isActiveSkin" : "carrousel-thumb"
             }
           >
             <img src={props?.src} />

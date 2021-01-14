@@ -1,12 +1,29 @@
+import SkillBorder from "./skills-border";
+
+import { motion } from "framer-motion";
+
+const skillVariant = {
+  selected: {
+    translateY: 0
+  },
+  notSelected: {
+    translateY: 15
+  }
+}
+
 export default function ButtonHabilities(props) {
   return (
     <div>
       <span className="option-icon">
-        <span className="option-icon-content">
+        <motion.span whileHover={{ translateY: 15}} variants={skillVariant} animate={{ selectedSkill ? "selected" : 'notSelected' }}
+          className="option-icon-content"
+        >
           <img src={props.src} />
-        </span>
+        </motion.span>
         <span className="option-icon-border">
-          <div className="container">{/* fazer bordas */}</div>
+          <div className="container">
+            <SkillBorder />
+          </div>
         </span>
       </span>
       <span className="option-line"></span>
