@@ -8,13 +8,13 @@ const pathVariants = {
   visible: {
     pathLength: 1,
     transition: {
-      duration: 0.7,
+      duration: 0.5,
       ease: "easeInOut",
     },
   },
 };
 
-export default function SkillBorder() {
+export default function SkillBorder(props) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -28,19 +28,19 @@ export default function SkillBorder() {
       <motion.path
         variants={pathVariants}
         initial="initial"
-        animate="visible"
+        animate={props?.skillSelected ? "visible" : null}
         d="M0,0H48L70,22V38"
       />
       <motion.path
         variants={pathVariants}
         initial="initial"
-        animate="visible"
+        animate={props?.skillSelected ? "visible" : null}
         d="M70,38V70H18"
       />
       <motion.path
         variants={pathVariants}
         initial="initial"
-        animate="visible"
+        animate={props?.skillSelected ? "visible" : null}
         d="M18,70H0V0"
       />
     </svg>

@@ -15,7 +15,7 @@ import Role from "../role";
 
 export default function SkillsSection() {
   let [bulletPosition, setBulletPosition] = useState("10%");
-  let [optionHabilities, setoptionHabilities] = useState({
+  let [optionHabilities, setOptionHabilities] = useState({
     text:
       "While working on a project, Lucas can easily learn new subjets and techniques if needed. When he's out of combat, Lucas is always leaning new ways to imrpove his work as well.",
     name: "passive",
@@ -108,7 +108,7 @@ export default function SkillsSection() {
                         key={index}
                         onClick={() => {
                           setBulletPosition(habilitiesOptions.position);
-                          setoptionHabilities({
+                          setOptionHabilities({
                             text: habilitiesOptions.text,
                             name: habilitiesOptions.name,
                             title: habilitiesOptions.title,
@@ -117,7 +117,10 @@ export default function SkillsSection() {
                           });
                         }}
                       >
-                        <ButtonHabilities src={habilitiesOptions.skill} />
+                        <ButtonHabilities
+                          src={habilitiesOptions.skill}
+                          skillSelected={optionHabilities.text == habilitiesOptions.text ? true : false}
+                        />
                       </button>
                     ))}
                     <div className="base-line">

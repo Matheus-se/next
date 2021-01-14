@@ -450,6 +450,7 @@ export const HabilitiesSection = styled.div`
                         pointer-events: none;
 
                         svg {
+                          z-index: 10;
                           fill: none;
                           position: absolute;
                           display: block;

@@ -4,25 +4,31 @@ import { motion } from "framer-motion";
 
 const skillVariant = {
   selected: {
-    translateY: 0
+    translateY: 0,
   },
   notSelected: {
-    translateY: 15
-  }
-}
+    translateY: 20,
+  },
+  hovered: {
+    translateY: 15,
+  },
+};
 
 export default function ButtonHabilities(props) {
   return (
     <div>
       <span className="option-icon">
-        <motion.span whileHover={{ translateY: 15}} variants={skillVariant} animate={{ selectedSkill ? "selected" : 'notSelected' }}
+        <motion.span
+          whileHover={props?.skillSelected ? null : "hovered"}
+          variants={skillVariant}
+          animate={props?.skillSelected ? "selected" : "notSelected"}
           className="option-icon-content"
         >
           <img src={props.src} />
         </motion.span>
-        <span className="option-icon-border">
+        <span className="option-icon-border" style={{ display: props?.skillSelected ? "block" : "none"}}>
           <div className="container">
-            <SkillBorder />
+            <SkillBorder skillSelected={props.skillSelected}/>
           </div>
         </span>
       </span>
