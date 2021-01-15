@@ -60,7 +60,7 @@ export default function SkinsSection() {
                     onSwiper={setThumbsSwiper}
                   >
                     {swipers.map((swiperItem, index) => (
-                      <SwiperSlide>
+                      <SwiperSlide key={index}>
                         <CarouselItem
                           isActive={sliderIndex == index}
                           title={swiperItem.title}
@@ -81,8 +81,9 @@ export default function SkinsSection() {
                   controller={{ control: thumbSwiper }}
                   onSlideChange={(swiper) => setSliderIndex(swiper.activeIndex)}
                 >
-                  {swipers.map((swiperImage) => (
+                  {swipers.map((swiperImage, index) => (
                     <SwiperSlide
+                      key={index}
                       className="slide-show-item-image"
                       style={{
                         backgroundColor: swiperImage?.contain

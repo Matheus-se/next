@@ -4,11 +4,10 @@ import SwiperCore, { Controller, EffectFade, Thumbs } from "swiper";
 import { SkinSection } from "../../styles/components/style";
 
 import Zoe from "../../assets/images/Zoe.jpg";
-import Akali from "../../assets/images/akali.jpg";
 
 import SectionTitle from "../section-title";
 import CarouselItem from "../carousel-item";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 SwiperCore.use([EffectFade, Thumbs, Controller]);
 
@@ -55,7 +54,7 @@ export default function SkinsSection() {
                     onSwiper={setThumbsSwiper}
                   >
                     {swipers.map((swiperItem, index) => (
-                      <SwiperSlide>
+                      <SwiperSlide key={index}>
                         <CarouselItem
                           isActive={sliderIndex == index}
                           title={swiperItem.title}
@@ -76,8 +75,8 @@ export default function SkinsSection() {
                   controller={{ control: thumbSwiper }}
                   onSlideChange={(swiper) => setSliderIndex(swiper.activeIndex)}
                 >
-                  {swipers.map((swiperImage) => (
-                    <SwiperSlide className="slide-show-item-image">
+                  {swipers.map((swiperImage, index) => (
+                    <SwiperSlide className="slide-show-item-image" key={index}>
                       <img src={swiperImage.src} />
                     </SwiperSlide>
                   ))}

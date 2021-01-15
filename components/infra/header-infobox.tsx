@@ -1,3 +1,6 @@
+import {gsap} from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+
 import Link from "next/link";
 
 import { Legend, FieldSet, Dificulty } from "../../styles/components/style";
@@ -6,14 +9,18 @@ import Role from "../role";
 import { BoxBottomDecoration } from "../../styles/components/style";
 import { Container } from "react-bootstrap";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
+
+gsap.registerPlugin(ScrollTrigger); 
 
 const opacityVariant = {
   initial: {
+    y: -20,
     opacity: 0,
   },
   visible: {
     opacity: 1,
+    y: 0,
     transition: {
       duration: 0.5,
     },
@@ -21,6 +28,23 @@ const opacityVariant = {
 };
 
 export default function HeaderInfoBox() {
+
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const element = ref.current
+    gsap.from(element, {
+      scrollTrigger: {
+        markers: true,
+        trigger: ".fieldset-content",
+        start: 'top bottom',
+        end: 'bottom center',
+        scrub: 1,
+      },
+      height: 0,
+    })
+  }, [])
+
   const [info, setInfo] = useState(false);
   const [contactSite, setContactSite] = useState(false);
   const [contactEmail, setContactEmail] = useState(false);
@@ -48,7 +72,7 @@ export default function HeaderInfoBox() {
           </motion.span>
         </Legend>
         <div className="row text-light fieldset-content">
-          <div className="linha-vertical"></div>
+          <div className="linha-vertical" ref={ref}></div>
           <motion.div
             variants={opacityVariant}
             initial="initial"

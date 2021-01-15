@@ -567,7 +567,7 @@ export const HabilitiesSection = styled.div`
 
                   svg {
                     fill: none;
-                    opacity: 0.35;
+                    opacity: 0.8;
                     stroke: white;
                     height: calc(100% + 24px);
                     left: 8px;

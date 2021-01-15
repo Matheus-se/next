@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { HabilitiesSection } from "../../styles/components/style";
 
@@ -15,6 +15,7 @@ import Role from "../role";
 import PresentationBorder from "../presentation-border";
 
 export default function SkillsSection() {
+
   let [bulletPosition, setBulletPosition] = useState("10%");
   let [optionHabilities, setOptionHabilities] = useState({
     text:

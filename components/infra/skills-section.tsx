@@ -1,4 +1,7 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
+
+import {gsap} from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 import { HabilitiesSection } from "../../styles/components/style";
 
@@ -20,8 +23,30 @@ import BaseLineKnob from "../baseline-knob";
 import Role from "../role";
 import PresentationBorder from "../presentation-border";
 
+gsap.registerPlugin(ScrollTrigger); 
+
 export default function SkillsSection() {
+
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const element = ref.current
+    gsap.from(element, {
+      scrollTrigger: {
+        trigger: ".background-icon",
+        start: 'top bottom',
+        end: 'top+=100 center',
+        scrub: 1,
+        onLeave: () => setIsOnView(true)
+      },
+      y: 30,
+      alpha: 0,
+      opacity: 0,
+    })
+  }, [])
+
   let [bulletPosition, setBulletPosition] = useState("10%");
+  let [isOnView, setIsOnView] = useState(false);
   let [optionHabilities, setOptionHabilities] = useState({
     text:
       "While working on a project, Lucas can easily learn new subjets and techniques if needed. When he's out of combat, Lucas is always leaning new ways to imrpove his work as well.",
@@ -91,7 +116,7 @@ export default function SkillsSection() {
                     <div className="base-line-left"></div>
                   </div>
                   <div className="option-list">
-                    <h2>abilities</h2>
+                    <h2 ref={ref}>abilities</h2>
                     {buttonHabilities.map((habilitiesOptions, index) => (
                       <button
                         key={index}
@@ -144,7 +169,7 @@ export default function SkillsSection() {
                       </div>
                     </div>
                     <div className="container">
-                      <PresentationBorder />
+                      <PresentationBorder isOnView={isOnView}/>
                     </div>
                   </div>
                 </div>

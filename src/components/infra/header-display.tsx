@@ -7,7 +7,7 @@ export default function HeaderDisplay() {
   return (
     <Container className="p-0">
       <FadeOutContainer>
-        <HeaderImage src={Lucas} />
+        <HeaderImage src={Lucas} className="header-image-centered"/>
       </FadeOutContainer>
     </Container>
   );

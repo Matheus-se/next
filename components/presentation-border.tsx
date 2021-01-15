@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
 
 const pathVariants = {
   initial: {
@@ -15,12 +14,7 @@ const pathVariants = {
   },
 };
 
-export default function PresentationBorder() {
-  const [teste, setTeste] = useState(false);
-
-  setTimeout(() => {
-    setTeste(true);
-  }, 500);
+export default function PresentationBorder(props) {
 
   return (
     <svg
@@ -32,7 +26,7 @@ export default function PresentationBorder() {
       <motion.path
         variants={pathVariants}
         initial="initial"
-        animate={teste ? "visible" : null}
+        animate={props.isOnView ? "visible" : null}
         d="M0,0V466H753V107L646,0H0Z"
       />
     </svg>
