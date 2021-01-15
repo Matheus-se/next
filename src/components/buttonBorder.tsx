@@ -14,7 +14,7 @@ const pathVariants = {
   },
 };
 
-export default function BorderButton() {
+export default function BorderButton(props) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -29,7 +29,7 @@ export default function BorderButton() {
         variants={pathVariants}
         d="M0,4H416l19,19V92H0"
         initial="initial"
-        animate="visible"
+        animate={props.startBorderAnimation ? "visible" : "initial"}
       />
     </svg>
   );

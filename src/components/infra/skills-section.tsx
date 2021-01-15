@@ -120,7 +120,11 @@ export default function SkillsSection() {
                       >
                         <ButtonHabilities
                           src={habilitiesOptions.skill}
-                          skillSelected={optionHabilities.text == habilitiesOptions.text ? true : false}
+                          skillSelected={
+                            optionHabilities.text == habilitiesOptions.text
+                              ? true
+                              : false
+                          }
                         />
                       </button>
                     ))}
@@ -149,18 +153,18 @@ export default function SkillsSection() {
                   <div className="video-container">
                     <div className="video-wrapper">
                       <div className="wrapper">
-                        <video
+                        {/* <video
                           preload="metadata"
                           loop
                           autoPlay
                           muted
                           src={optionHabilities.presentation}
                           poster={optionHabilities.poster}
-                        />
+                        /> */}
                       </div>
                     </div>
                     <div className="container">
-                      <PresentationBorder/>
+                      <PresentationBorder />
                     </div>
                   </div>
                 </div>
