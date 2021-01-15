@@ -86,7 +86,7 @@ export const Legend = styled.legend`
   width: auto;
   margin-bottom: 0;
 
-  span {
+  span.name {
     padding: 0px 15px 10px;
     font-size: 114px;
     font-family: serif;
@@ -307,8 +307,6 @@ export const HabilitiesSection = styled.div`
                       width: 100%;
                       pointer-events: none;
                       opacity: 1;
-                      transition: opacity 0.4s
-                        cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
 
                       h6 {
                         text-transform: uppercase;
@@ -336,14 +334,6 @@ export const HabilitiesSection = styled.div`
                         line-height: 1.4;
                         letter-spacing: 0.05em;
                       }
-                    }
-
-                    li.is-active {
-                      pointer-events: auto;
-                      z-index: 1;
-                      opacity: 1;
-                      transition-duration: 1s;
-                      transition-delay: 0.2s;
                     }
                   }
                 }
@@ -577,6 +567,7 @@ export const HabilitiesSection = styled.div`
 
                   svg {
                     fill: none;
+                    opacity: 0.35;
                     stroke: white;
                     height: calc(100% + 24px);
                     left: 8px;
@@ -721,13 +712,14 @@ export const SkinSection = styled.section`
                       cursor: pointer;
 
                       .container {
+                        display: none;
                         position: absolute;
                         inset: 1px;
                         pointer-events: none;
 
                         svg {
                           position: absolute;
-                          display: block;
+                          display: none;
                           left: 3px;
                           top: 3px;
                           width: 99%;
@@ -740,10 +732,6 @@ export const SkinSection = styled.section`
                         position: relative;
                         width: 100px;
                         height: 100px;
-
-                        .isActiveSkin {
-                          transform: scale(1) !important;
-                        }
 
                         .carrousel-thumb {
                           opacity: 1;
@@ -782,6 +770,28 @@ export const SkinSection = styled.section`
                         transition: opacity 0.3s
                             cubic-bezier(0.645, 0.045, 0.355, 1) 0s,
                           transform 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+                      }
+                    }
+                  }
+
+                  .swiper-slide-active {
+                    .carrousel-thumb {
+                      transform: scale(1) !important;
+                    }
+
+                    .container {
+                      display: block !important;
+                      position: absolute;
+                      inset: 1px;
+                      pointer-events: none;
+
+                      svg {
+                        position: absolute;
+                        display: block !important;
+                        left: 3px;
+                        top: 3px;
+                        width: 99%;
+                        height: 100%;
                       }
                     }
                   }

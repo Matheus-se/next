@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import BorderButton from "./buttonBorder";
 
 export default function CarouselItem(props) {
@@ -5,14 +6,10 @@ export default function CarouselItem(props) {
     <li className="carrousel-item">
       <button>
         <div className="container">
-          <BorderButton />
+          <BorderButton startBorderAnimation={props.isActive} />
         </div>
         <div className="carrousel-thumb-wrapper">
-          <div
-            className={
-              props?.active ? "carrousel-thumb isActiveSkin" : "carrousel-thumb"
-            }
-          >
+          <div className={"carrousel-thumb"}>
             <img src={props?.src} />
           </div>
         </div>
