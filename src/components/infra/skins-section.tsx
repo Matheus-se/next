@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Controller, EffectFade, Thumbs } from "swiper";
+import SwiperCore, { Autoplay, Controller, EffectFade, Thumbs } from "swiper";
 
 import { SkinSection } from "../../styles/components/style";
 
@@ -12,7 +12,7 @@ import SectionTitle from "../section-title";
 import CarouselItem from "../carousel-item";
 import { useState } from "react";
 
-SwiperCore.use([EffectFade, Thumbs, Controller]);
+SwiperCore.use([EffectFade, Thumbs, Controller, Autoplay]);
 
 export default function SkinsSection() {
   const [thumbSwiper, setThumbsSwiper] = useState(null);
@@ -77,8 +77,10 @@ export default function SkinsSection() {
                 <Swiper
                   className="slide-show"
                   effect="fade"
+                  autoplay
                   thumbs={{ swiper: thumbSwiper }}
                   controller={{ control: thumbSwiper }}
+                  data-swiper-autoplay="2000"
                   onSlideChange={(swiper) => setSliderIndex(swiper.activeIndex)}
                 >
                   {swipers.map((swiperImage, index) => (
