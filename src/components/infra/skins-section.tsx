@@ -47,6 +47,9 @@ export default function SkinsSection() {
             <div className="slideshow-area">
               <h2>
                 Projects<br></br>
+                <span className="small-text">
+                  Full concept on my artStation
+                </span>
               </h2>
               <div className="carrousel-wrapper">
                 <ul>
