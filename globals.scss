@@ -1,0 +1,119 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-bottom: 0px;
+}
+
+.labels-box {
+  font-size: 0.625rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+
+  .yellow-text {
+    color: #cfa75d;
+  }
+}
+
+.swiper-slide {
+  height: auto !important;
+}
+
+.read-more-box {
+  font-size: 0.875rem;
+}
+
+.role {
+  display: inline-block;
+  vertical-align: middle;
+  width: 36px;
+  height: 36px;
+  fill: rgb(208, 168, 92);
+}
+
+.linha-vertical {
+  height: 75%;
+  width: 1px;
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-sizing: content-box;
+}
+
+.fieldset-content {
+  margin-top: -10px;
+  position: relative;
+}
+
+.left-box-decoration {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translate(-50%, 0px);
+  stroke: rgb(57, 64, 72);
+}
+
+.navbar {
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 80px;
+  border-bottom: 2px solid rgba(51, 51, 51, 0.25);
+  background-color: #111111 !important;
+
+  .navbar-brand {
+    height: 50px;
+
+    img {
+      height: 100%;
+    }
+  }
+
+  button.btn {
+    font-size: 12px;
+    text-align: center;
+    border-radius: 2px;
+    position: relative;
+    color: white;
+    text-decoration: none;
+    border: 0;
+    outline: 0;
+    text-transform: uppercase;
+    background-color: #00a0ba;
+
+    &:hover {
+      background-color: #00b2cf;
+    }
+
+    &:active {
+      background-color: #00a0ba;
+    }
+
+    a {
+      font-weight: bold;
+    }
+  }
+}
+
+.small-text {
+  font-size: 12px;
+}
+
+.content-container {
+  margin-top: 80px;
+}
+
+a {
+  color: white !important;
+}
