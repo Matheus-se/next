@@ -1,30 +1,28 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# Brother's resume - Next.js Project
 
-First, run the development server:
+<p align='center'><img src='https://miro.medium.com/max/650/1*Hva7hcsFWulFUPhrEWui1A.jpeg' width=100%></p>
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+> Status: Finished :heavy_check_mark:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Description :star:
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+This project was created with Next.js in an attempt to create a "resume" for my brother in riot games style. Also was an opportunity for me to learn new frameworks and libraries to develop my front-end skills. No API call was needed since this project was made to be static and lightweight.
 
-## Learn More
+## Depployed project on Vercel :computer:
 
-To learn more about Next.js, take a look at the following resources:
+> https://brothersresume.vercel.app/
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Applied skills :bulb:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- Framer Motion
+- Green Sock
+- Swiper
+- Next Images
+- Bootstrap
+- Styled Components
 
-## Deploy on Vercel
+## Contact :e-mail:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+matheushenrriquepeteleco@gmail.com
