@@ -2,7 +2,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 # Brother's resume - Next.js Project
 
-<p align='center'><img src='https://miro.medium.com/max/650/1*Hva7hcsFWulFUPhrEWui1A.jpeg' width=100%></p>
+<p align='center'><img src='https://i2.wp.com/blog.logrocket.com/wp-content/uploads/2020/11/next-js-banner.png' width=100%></p>
 
 > Status: Finished :heavy_check_mark:
 
